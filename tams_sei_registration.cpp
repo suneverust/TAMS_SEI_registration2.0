@@ -241,6 +241,7 @@ main (int argc, char**argv)
     pcl::IterativeClosestPoint<PointT,PointT> icp;
     icp.setInputSource(object_trans);
     icp.setInputTarget(scene);
+    icp.setMaxCorrespondenceDistance(0.2);
     icp.setTransformationEpsilon(1E-04);
     icp.align(*object_final);
 
