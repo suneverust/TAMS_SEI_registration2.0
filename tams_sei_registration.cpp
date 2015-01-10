@@ -242,7 +242,7 @@ main (int argc, char**argv)
     icp.setInputSource(object_trans);
     icp.setInputTarget(scene);
     icp.setMaxCorrespondenceDistance(0.2);
-    icp.setTransformationEpsilon(1E-04);
+    icp.setTransformationEpsilon(1E-06);
     icp.align(*object_final);
 
     std::cout << "ICP converged score:" << icp.getFitnessScore() << std::endl;
